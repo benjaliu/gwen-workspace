@@ -1,0 +1,63 @@
+site_name: Gwen's Workspace
+site_description: Gwen 的学习与项目笔记
+site_author: Gwen
+
+# 根路径部署
+site_url: https://your-domain.com/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色
+  icon:
+    repo: fontawesome/brands/github
+  language: zh
+
+repo_name: benjaliu/gwen-workspace
+repo_url: https://github.com/benjaliu/gwen-workspace
+edit_uri: edit/main/docs/
+
+nav:
+  - 首页: index.md
+  - 写作素材: zuowen-sucai.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
